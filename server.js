@@ -24,7 +24,7 @@ mongoose.connection.on("connected", () => {
 });
 
 //ROUTES BELOW
-app.use("/auth", authController);
+app.use("/auth", authController); // #4 Prepends the routes
 
 app.get("/", async (req, res) => { // #2 Created Landing page and made a views folder. Create index.ejs file inside w/ HTML.
     res.render("index.ejs");
